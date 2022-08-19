@@ -17,16 +17,10 @@ function estableceNombreUsuario() {
         estableceNombreUsuario();
     } else {
         localStorage.setItem('nombre', miNombre);
-        miTitulo.textContent = 'Mozilla es genial, ' + miNombre;  
+        miTitulo.innerHTML = 'Mozilla es genial, ' + miNombre;  
     }
 }
 
-if (!localStorage.getItem('nombre')) {
-    estableceNombreUsuario();
-}
-else {
-    let nombreAlmacenado = localStorage.getItem('nombre');
-    miTitulo.textContent = 'Mozilla es genial, ' + nombreAlmacenado;
 }
 
 miBoton.onclick = function() {
